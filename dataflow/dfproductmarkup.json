@@ -12,7 +12,15 @@
 					"name": "productstream"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "productmarkupset",
+						"type": "DatasetReference"
+					},
+					"name": "sinkblob"
+				}
+			],
 			"transformations": [
 				{
 					"name": "calculatedmarkup"
@@ -42,7 +50,11 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> productstream",
-				"productstream derive(markup = ListPrice / StandardCost) ~> calculatedmarkup"
+				"productstream derive(markup = ListPrice / StandardCost) ~> calculatedmarkup",
+				"calculatedmarkup sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true) ~> sinkblob"
 			]
 		}
 	}

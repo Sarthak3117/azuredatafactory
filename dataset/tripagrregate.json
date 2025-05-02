@@ -1,0 +1,23 @@
+{
+	"name": "tripagrregate",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "tripblobstorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "tripagrregate.csv",
+				"container": "tripdata"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

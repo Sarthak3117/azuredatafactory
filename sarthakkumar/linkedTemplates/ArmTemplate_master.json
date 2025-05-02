@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
 		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
 		"AzureDataLakeStoragetaxi_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStoragetaxi'"
@@ -31,17 +35,17 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'productmarkupblob'"
 		},
-		"taxitripdb_password": {
-			"type": "secureString",
-			"metadata": "Secure string for 'password' of 'taxitripdb'"
-		},
 		"taxidatabase_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'taxidatabase'"
 		},
-		"AzureBlobStorage2_connectionString": {
+		"taxitripdb_password": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+			"metadata": "Secure string for 'password' of 'taxitripdb'"
+		},
+		"tripblobstorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'tripblobstorage'"
 		},
 		"AzureDataLakeStoragetaxi_properties_typeProperties_url": {
 			"type": "string",
@@ -83,18 +87,6 @@
 			"type": "string",
 			"defaultValue": "sarthakkumar"
 		},
-		"taxitripdb_properties_typeProperties_server": {
-			"type": "string",
-			"defaultValue": "sarthakkumar.database.windows.net"
-		},
-		"taxitripdb_properties_typeProperties_database": {
-			"type": "string",
-			"defaultValue": "taxi-data (1)"
-		},
-		"taxitripdb_properties_typeProperties_userName": {
-			"type": "string",
-			"defaultValue": "sarthakkumar"
-		},
 		"taxidatabase_properties_typeProperties_server": {
 			"type": "string",
 			"defaultValue": "sarthakkumar.database.windows.net"
@@ -104,6 +96,18 @@
 			"defaultValue": "taxidata"
 		},
 		"taxidatabase_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sarthakkumar"
+		},
+		"taxitripdb_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "sarthakkumar.database.windows.net"
+		},
+		"taxitripdb_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "taxi-data (1)"
+		},
+		"taxitripdb_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "sarthakkumar"
 		},
@@ -137,6 +141,9 @@
 					"AzureBlobStorage1_connectionString": {
 						"value": "[parameters('AzureBlobStorage1_connectionString')]"
 					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
 					"AzureDataLakeStoragetaxi_accountKey": {
 						"value": "[parameters('AzureDataLakeStoragetaxi_accountKey')]"
 					},
@@ -152,14 +159,14 @@
 					"productmarkupblob_connectionString": {
 						"value": "[parameters('productmarkupblob_connectionString')]"
 					},
-					"taxitripdb_password": {
-						"value": "[parameters('taxitripdb_password')]"
-					},
 					"taxidatabase_password": {
 						"value": "[parameters('taxidatabase_password')]"
 					},
-					"AzureBlobStorage2_connectionString": {
-						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					"taxitripdb_password": {
+						"value": "[parameters('taxitripdb_password')]"
+					},
+					"tripblobstorage_connectionString": {
+						"value": "[parameters('tripblobstorage_connectionString')]"
 					},
 					"AzureDataLakeStoragetaxi_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStoragetaxi_properties_typeProperties_url')]"
@@ -191,15 +198,6 @@
 					"AzureSqlDatabase3_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabase3_properties_typeProperties_userName')]"
 					},
-					"taxitripdb_properties_typeProperties_server": {
-						"value": "[parameters('taxitripdb_properties_typeProperties_server')]"
-					},
-					"taxitripdb_properties_typeProperties_database": {
-						"value": "[parameters('taxitripdb_properties_typeProperties_database')]"
-					},
-					"taxitripdb_properties_typeProperties_userName": {
-						"value": "[parameters('taxitripdb_properties_typeProperties_userName')]"
-					},
 					"taxidatabase_properties_typeProperties_server": {
 						"value": "[parameters('taxidatabase_properties_typeProperties_server')]"
 					},
@@ -208,6 +206,15 @@
 					},
 					"taxidatabase_properties_typeProperties_userName": {
 						"value": "[parameters('taxidatabase_properties_typeProperties_userName')]"
+					},
+					"taxitripdb_properties_typeProperties_server": {
+						"value": "[parameters('taxitripdb_properties_typeProperties_server')]"
+					},
+					"taxitripdb_properties_typeProperties_database": {
+						"value": "[parameters('taxitripdb_properties_typeProperties_database')]"
+					},
+					"taxitripdb_properties_typeProperties_userName": {
+						"value": "[parameters('taxitripdb_properties_typeProperties_userName')]"
 					}
 				}
 			},

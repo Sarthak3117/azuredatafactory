@@ -47,6 +47,22 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'tripblobstorage'"
 		},
+		"flipkartdata_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'flipkartdata'"
+		},
+		"FlipkartAzureBlobStorage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'FlipkartAzureBlobStorage'"
+		},
+		"FlipkartAzureBlobStorage17_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'FlipkartAzureBlobStorage17'"
+		},
+		"flipkartfinal_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'flipkartfinal'"
+		},
 		"AzureDataLakeStoragetaxi_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://adlsstorageaccount17.dfs.core.windows.net/"
@@ -167,6 +183,18 @@
 					},
 					"tripblobstorage_connectionString": {
 						"value": "[parameters('tripblobstorage_connectionString')]"
+					},
+					"flipkartdata_connectionString": {
+						"value": "[parameters('flipkartdata_connectionString')]"
+					},
+					"FlipkartAzureBlobStorage_connectionString": {
+						"value": "[parameters('FlipkartAzureBlobStorage_connectionString')]"
+					},
+					"FlipkartAzureBlobStorage17_connectionString": {
+						"value": "[parameters('FlipkartAzureBlobStorage17_connectionString')]"
+					},
+					"flipkartfinal_connectionString": {
+						"value": "[parameters('flipkartfinal_connectionString')]"
 					},
 					"AzureDataLakeStoragetaxi_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStoragetaxi_properties_typeProperties_url')]"

@@ -35,6 +35,18 @@
 		"tripblobstorage_connectionString": {
 			"value": ""
 		},
+		"flipkartdata_connectionString": {
+			"value": ""
+		},
+		"FlipkartAzureBlobStorage_connectionString": {
+			"value": ""
+		},
+		"FlipkartAzureBlobStorage17_connectionString": {
+			"value": ""
+		},
+		"flipkartfinal_connectionString": {
+			"value": ""
+		},
 		"AzureDataLakeStoragetaxi_properties_typeProperties_url": {
 			"value": "https://adlsstorageaccount17.dfs.core.windows.net/"
 		},
